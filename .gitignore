@@ -26,7 +26,17 @@
 *.a
 *.lib
 
+# Misc
+Makefile
+CMakeFiles/*
+CMakeCache.txt
+CTestTestfile.cmake
+cmake_install.cmake
+
+.vscode/*
+
 # Executables
 *.exe
 *.out
 *.app
+build/*
