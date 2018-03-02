@@ -10,6 +10,9 @@ int main(int, char**)
     auto dailySink = std::make_shared<wrapped_daily_sink>("log", 23, 59);
     auto log = std::make_shared<spdlog::logger>(__FUNCTION__, dailySink);
     log->critical("Testing {}", "What?");
+    log->info("Logging stopped.");
+    spdlog::drop_all();
+
     std::cout << "Game over.\n";
     return 0;
 }
