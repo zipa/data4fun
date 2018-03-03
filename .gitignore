@@ -33,9 +33,10 @@ CMakeFiles/*
 CMakeCache.txt
 CTestTestfile.cmake
 cmake_install.cmake
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
 log_2018-*
-
-.vscode/*
+subprojects/*
 
 # Executables
 *.exe

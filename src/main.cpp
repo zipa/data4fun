@@ -1,18 +1,45 @@
 #include <iostream>
-#include <spdlog/spdlog.h>
+#include <memory>
+#include <spdlogwrap.h>
 
-using wrapped_daily_sink = 
-        spdlog::sinks::daily_file_sink<spdlog::details::null_mutex, spdlog::sinks::dateonly_daily_file_name_calculator>;
+// #include <GL/glew.h>
+// #include <GLFW/glfw3.h>
+// #include <glm/glm.hpp>
+
+
+
+// using namespace glm;
+// GLFWwindow* window;
+
+using namespace std;
+
+class Test
+{
+public:
+    Test()
+    {
+        log_ = LogWrap::GetLog("Test");
+        log_->info("Test constructor.");
+    }
+
+    int DoSomething()
+    {
+        log_->info("::{}| Doing something... {}", __func__, "no context here");
+    }
+private:
+    std::shared_ptr<spdlog::logger> log_;
+};
 
 int main(int, char**)
 {
-    spdlog::set_pattern("%Y%m%d-%H:%M:%S.%f%z|%i|%L|%t|%n|%v");
-    auto dailySink = std::make_shared<wrapped_daily_sink>("log", 23, 59);
-    auto log = std::make_shared<spdlog::logger>(__FUNCTION__, dailySink);
-    log->critical("Testing {}", "What?");
-    log->info("Logging stopped.");
-    spdlog::drop_all();
+    LogWrap::Initialize("log");
+    auto log = LogWrap::GetLog("MAIN");
 
+    Test t;
+    t.DoSomething();
+
+    log->info("I'm done here.");
     std::cout << "Game over.\n";
+    LogWrap::Shutdown();
     return 0;
 }

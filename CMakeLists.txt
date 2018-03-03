@@ -11,8 +11,14 @@ set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
+add_subdirectory (subprojects)
+
 include_directories(
     ${PROJECT_SOURCE_DIR}/include
+    /home/boris/other/spdlog/include/
+	${PROJECT_SOURCE_DIR}/external/glfw-3.1.2/include/
+	${PROJECT_SOURCE_DIR}/external/glm-0.9.7.1/
+	${PROJECT_SOURCE_DIR}/external/glew-1.13.0/include/
 )
 
 LINK_DIRECTORIES(
@@ -25,14 +31,19 @@ set(LIBRARIES
     boost_filesystem
     boost_thread
     pthread
+    ${OPENGL_LIBRARY}
+	glfw
+	GLEW_1130
 )
 
 set(SOURCES
-    
+    src/spdlogwrap.cpp
+    src/GLhelper.cpp
 )
 
 set(HEADERS
-
+    include/spdlogwrap.h
+    include/GLhelper.h
 )
 
 add_executable(data4fun src/main.cpp ${SOURCES} ${HEADERS})
