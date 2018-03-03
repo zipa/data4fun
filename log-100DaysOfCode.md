@@ -15,6 +15,6 @@
 ## Day 3: March 3, 2018
 
 **Today's Progress**: Created a wrapper for spdlog for uniform use throughout the project.
-Testing the OpenGL initialization. Created a window.
+Testing the OpenGL initialization. Created a window. Wrapped it into a class.
 
 **Thoughts:** Refactoring might be tedious sometimes, but it pays off.
