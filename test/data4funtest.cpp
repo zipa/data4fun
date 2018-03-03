@@ -1,6 +1,8 @@
 #include <gmock/gmock.h>
 
 #include <iostream>
+#include <memory>
+#include <spdlogwrap.h>
 
 using namespace testing;
 using namespace std;
@@ -11,12 +13,25 @@ namespace
 class TestFixture : public Test
 {
 public:
-    string test;
+    TestFixture()
+    {
+        LogWrap::Initialize("log", spdlog::level::trace);
+        testLog_ = LogWrap::GetLog("TestFixture");
+    }
+
+    ~TestFixture()
+    {
+        LogWrap::Shutdown();
+    }
+
+    std::shared_ptr<spdlog::logger> Log() { return testLog_; }
+private:
+    std::shared_ptr<spdlog::logger> testLog_;
 };
 
-TEST_F(TestFixture, PassByDefault)
+TEST_F(TestFixture, LoggerCreated)
 {
-    EXPECT_TRUE(test.empty());
+    EXPECT_NE(Log(), nullptr);
 }
 
 }

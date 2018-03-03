@@ -1,15 +1,9 @@
 #include <iostream>
 #include <memory>
+#include <exception>
 #include <spdlogwrap.h>
 
-// #include <GL/glew.h>
-// #include <GLFW/glfw3.h>
-// #include <glm/glm.hpp>
-
-
-
-// using namespace glm;
-// GLFWwindow* window;
+#include <GLhelper.h>
 
 using namespace std;
 
@@ -32,11 +26,22 @@ private:
 
 int main(int, char**)
 {
-    LogWrap::Initialize("log");
+    LogWrap::Initialize("log", spdlog::level::trace);
     auto log = LogWrap::GetLog("MAIN");
 
     Test t;
     t.DoSomething();
+
+    try
+    {
+        GLhelper glh;
+        glh.Run();
+    }
+    catch(std::runtime_error& ex)
+    {
+        log->critical("Something's wrong: {}", ex.what());
+    }
+
 
     log->info("I'm done here.");
     std::cout << "Game over.\n";

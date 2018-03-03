@@ -16,9 +16,9 @@ add_subdirectory (subprojects)
 include_directories(
     ${PROJECT_SOURCE_DIR}/include
     /home/boris/other/spdlog/include/
-	${PROJECT_SOURCE_DIR}/external/glfw-3.1.2/include/
-	${PROJECT_SOURCE_DIR}/external/glm-0.9.7.1/
-	${PROJECT_SOURCE_DIR}/external/glew-1.13.0/include/
+	${PROJECT_SOURCE_DIR}/subprojects/glfw-3.1.2/include/
+	${PROJECT_SOURCE_DIR}/subprojects/glm-0.9.7.1/
+	${PROJECT_SOURCE_DIR}/subprojects/glew-1.13.0/include/
 )
 
 LINK_DIRECTORIES(
@@ -56,4 +56,4 @@ set(TESTSOURCES
 add_executable(d4ftest test/main.cpp ${TESTSOURCES} ${SOURCES} ${HEADERS})
 target_link_libraries(d4ftest gtest gmock ${LIBRARIES})
 
-add_test(NAME Test_dataa4fun COMMAND ${EXECUTABLE_OUTPUT_PATH}/d4ftest)
+add_test(NAME Test_data4fun COMMAND ${EXECUTABLE_OUTPUT_PATH}/d4ftest)
