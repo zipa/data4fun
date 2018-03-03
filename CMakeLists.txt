@@ -44,3 +44,5 @@ set(TESTSOURCES
 
 add_executable(d4ftest test/main.cpp ${TESTSOURCES} ${SOURCES} ${HEADERS})
 target_link_libraries(d4ftest gtest gmock ${LIBRARIES})
+
+add_test(NAME Test_dataa4fun COMMAND ${EXECUTABLE_OUTPUT_PATH}/d4ftest)
