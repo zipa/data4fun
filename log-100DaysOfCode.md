@@ -23,5 +23,5 @@ Testing the OpenGL initialization. Created a window. Wrapped it into a class.
 
 **Today's Progress:** Started working on a data model. First step is the location object.
 
-**Thoughts:** To better understand the both square-based and hexagon-based models, I need to list pros and cons (some paper-modeling will take place).
+**Thoughts:** To better understand the both square-based and hexagon-based models in a 3D space, I need to list pros and cons (some paper-modeling will take place). Decided to go with point-based objects that define a location within the proximity of a point, as it seems more natural. This will eventually result in some form of conversion later, if I ever introduce a board-style model.
 

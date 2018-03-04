@@ -2,18 +2,7 @@
     "configurations": [
         {
             "name": "null",
-            "includePath": [
-                "/usr/local/include/",
-                "/usr/include/",
-                "/usr/include/c++/7/",
-                "/usr/include/x86_64-linux-gnu/",
-                "/usr/include/x86_64-linux-gnu/c++/7/",
-                "/home/boris/prj/data4fun/include/",
-                "/home/boris/other/spdlog/include/",
-                "/home/boris/prj/data4fun}/subprojects/glfw-3.1.2/include/",
-                "/home/boris/prj/data4fun/subprojects/glm-0.9.7.1/",
-                "/home/boris/prj/data4fun/subprojects/glew-1.13.0/include/"
-            ],
+            "includePath": [],
             "defines": [],
             "browse": {
                 "path": [],

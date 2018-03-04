@@ -47,11 +47,11 @@ set(HEADERS
 )
 
 set(DATAMODEL_SOURCES
-    src/data/location.cpp
+    src/data/common.cpp
 )
 
 set(DATAMODEL_HEADERS
-    include/data/location.h
+    include/data/common.h
 )
 
 add_executable(data4fun src/main.cpp ${SOURCES} ${DATAMODEL_SOURCES} ${HEADERS} ${DATAMODEL_HEADERS})
