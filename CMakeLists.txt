@@ -46,14 +46,22 @@ set(HEADERS
     include/GLhelper.h
 )
 
-add_executable(data4fun src/main.cpp ${SOURCES} ${HEADERS})
+set(DATAMODEL_SOURCES
+    src/data/location.cpp
+)
+
+set(DATAMODEL_HEADERS
+    include/data/location.h
+)
+
+add_executable(data4fun src/main.cpp ${SOURCES} ${DATAMODEL_SOURCES} ${HEADERS} ${DATAMODEL_HEADERS})
 target_link_libraries(data4fun ${LIBRARIES})
 
 set(TESTSOURCES
     test/data4funtest.cpp
 )
 
-add_executable(d4ftest test/main.cpp ${TESTSOURCES} ${SOURCES} ${HEADERS})
+add_executable(d4ftest test/main.cpp ${TESTSOURCES} ${SOURCES} ${DATAMODEL_SOURCES} ${HEADERS} ${DATAMODEL_HEADERS})
 target_link_libraries(d4ftest gtest gmock ${LIBRARIES})
 
 add_test(NAME Test_data4fun COMMAND ${EXECUTABLE_OUTPUT_PATH}/d4ftest)
