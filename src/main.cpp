@@ -7,31 +7,27 @@
 
 using namespace std;
 
-class Test
-{
-public:
-    Test()
-    {
-        log_ = LogWrap::GetLog("Test");
-        log_->info("Test constructor.");
-    }
-
-    int DoSomething()
-    {
-        log_->info("::{}| Doing something... {}", __func__, "no context here");
-    }
-private:
-    std::shared_ptr<spdlog::logger> log_;
-};
+void StartGL();
 
 int main(int, char**)
 {
     LogWrap::Initialize("log", spdlog::level::trace);
     auto log = LogWrap::GetLog("MAIN");
+    log->info("Data4Fun started.");
 
-    Test t;
-    t.DoSomething();
+    // begin test code
 
+    // end test code
+
+    log->info("I'm done here.");
+    std::cout << "Game over.\n";
+    LogWrap::Shutdown();
+    return 0;
+}
+
+void StartGL()
+{
+    auto log = LogWrap::GetLog(__func__);
     try
     {
         GLhelper glh;
@@ -41,10 +37,4 @@ int main(int, char**)
     {
         log->critical("Something's wrong: {}", ex.what());
     }
-
-
-    log->info("I'm done here.");
-    std::cout << "Game over.\n";
-    LogWrap::Shutdown();
-    return 0;
 }
