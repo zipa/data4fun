@@ -5,6 +5,9 @@
 #include <chrono>
 #include <ncurses.h>
 
+namespace ConsoleBase
+{
+
 Console::Console()
 {
     const char* LOGSRC {__func__};
@@ -52,4 +55,6 @@ int Console::Run()
     wrefresh(stdscr);
     std::this_thread::sleep_for(std::chrono::duration<double, std::milli>(3000));
     return 0;
+}
+
 }

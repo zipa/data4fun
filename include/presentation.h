@@ -3,6 +3,9 @@
 
 #include <iostream>
 
+namespace Presentation
+{
+
 class IPrintable
 {
 public:
@@ -17,4 +20,5 @@ public:
     virtual int Run() = 0;
 };
 
+}
 #endif // _PRESENTATION_H_

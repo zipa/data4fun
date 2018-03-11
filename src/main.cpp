@@ -62,6 +62,6 @@ void StartGL()
 
 void StartConsole()
 {
-    shared_ptr<IPresentation> con = make_shared<Console>();
+    shared_ptr<Presentation::IPresentation> con = make_shared<ConsoleBase::Console>();
     con->Run();
 }

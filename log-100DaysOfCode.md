@@ -30,3 +30,9 @@ Testing the OpenGL initialization. Created a window. Wrapped it into a class.
 **Today's progress:** Starting working on the ncurses implementation for simple presentation (console). Created some interfaces for presentation purposes.
 
 **Thoughts:** The console approach is completely different than GL, so I expect a lot of refactoring in the IPresentation interface before devising a more or less agnostic approach to this.
+
+## Day 6: March 11, 2018
+
+**Today's progress:** Introduced namespaces into the presentation model. Added basic unit tests. Started Window class.
+
+**Thoughts:** Creating the Window class implies some other classes as well (Point, Size, Rectangle, etc.) Those classes must be covered with unit tests as they will serve as a base for multiple functionalities. Is there a way to unit test the visible screen result (research)?

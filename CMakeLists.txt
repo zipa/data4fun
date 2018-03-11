@@ -63,6 +63,7 @@ target_link_libraries(data4fun ${LIBRARIES})
 
 set(TESTSOURCES
     test/data4funtest.cpp
+    test/ConsoleAppTest.cpp
 )
 
 add_executable(d4ftest test/main.cpp ${TESTSOURCES} ${SOURCES} ${DATAMODEL_SOURCES} ${HEADERS} ${DATAMODEL_HEADERS})
