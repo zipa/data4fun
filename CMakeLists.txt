@@ -31,6 +31,7 @@ set(LIBRARIES
     boost_filesystem
     boost_thread
     pthread
+    ncurses
     ${OPENGL_LIBRARY}
 	glfw
 	GLEW_1130
@@ -39,11 +40,14 @@ set(LIBRARIES
 set(SOURCES
     src/spdlogwrap.cpp
     src/GLhelper.cpp
+    src/ConsoleApp.cpp
 )
 
 set(HEADERS
     include/spdlogwrap.h
     include/GLhelper.h
+    include/presentation.h
+    include/ConsoleApp.h
 )
 
 set(DATAMODEL_SOURCES

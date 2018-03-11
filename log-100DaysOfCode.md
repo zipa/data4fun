@@ -25,3 +25,8 @@ Testing the OpenGL initialization. Created a window. Wrapped it into a class.
 
 **Thoughts:** To better understand the both square-based and hexagon-based models in a 3D space, I need to list pros and cons (some paper-modeling will take place). Decided to go with point-based objects that define a location within the proximity of a point, as it seems more natural. This will eventually result in some form of conversion later, if I ever introduce a board-style model.
 
+## Day 5: March 10, 2018
+
+**Today's progress:** Starting working on the ncurses implementation for simple presentation (console). Created some interfaces for presentation purposes.
+
+**Thoughts:** The console approach is completely different than GL, so I expect a lot of refactoring in the IPresentation interface before devising a more or less agnostic approach to this.

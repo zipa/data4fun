@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstdint>
 #include <type_traits>
 
 namespace DataModel
@@ -45,6 +46,11 @@ private:
     T y_ { 0 };
     T z_ { 0 };
 };
+
+using PointDbl = Point<double>;
+using PointI32 = Point<int32_t>;
+using PointI64 = Point<int64_t>;
+
 
 }
 

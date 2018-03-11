@@ -4,11 +4,13 @@
 #include <spdlogwrap.h>
 
 #include <GLhelper.h>
+#include <ConsoleApp.h>
 #include <data/common.h>
 
 using namespace std;
 
 void StartGL();
+void StartConsole();
 void TestCommon();
 
 int main(int, char**)
@@ -18,7 +20,7 @@ int main(int, char**)
     log->info("Data4Fun started.");
 
     // begin test code
-    TestCommon();
+    StartConsole();
     // end test code
 
     log->info("I'm done here.");
@@ -56,4 +58,10 @@ void StartGL()
     {
         log->critical("Something's wrong: {}", ex.what());
     }
+}
+
+void StartConsole()
+{
+    shared_ptr<IPresentation> con = make_shared<Console>();
+    con->Run();
 }
