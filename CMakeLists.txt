@@ -39,15 +39,15 @@ set(LIBRARIES
 
 set(SOURCES
     src/spdlogwrap.cpp
-    src/GLhelper.cpp
-    src/ConsoleApp.cpp
+    src/gl/GLhelper.cpp
+    src/console/ConsoleApp.cpp
 )
 
 set(HEADERS
     include/spdlogwrap.h
-    include/GLhelper.h
+    include/gl/GLhelper.h
+    include/console/ConsoleApp.h
     include/presentation.h
-    include/ConsoleApp.h
 )
 
 set(DATAMODEL_SOURCES

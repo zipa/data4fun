@@ -37,8 +37,9 @@ Testing the OpenGL initialization. Created a window. Wrapped it into a class.
 
 **Thoughts:** Creating the Window class implies some other classes as well (Point, Size, Rectangle, etc.) Those classes must be covered with unit tests as they will serve as a base for multiple functionalities. Is there a way to unit test the visible screen result (research)?
 
-## Day 7: March 12, 2018
+## Day 7-20: March 12, 2018
 
-**Today's progress:** 
+**Today's progress:** I have been unregular with the updates here. Today I did just a bit of a project cleanup and started drafting the design of flexible text comparator for the sorting algorithm.
 
-**Thoughts:** 
+**Thoughts:** There is much more than just a comparison in this kind of code. One should think about various orders within different alphabets, numbers and their notations, multiplicators, prefixes, suffixes...
+I want to start simple, building a base for the flexibility, using the configurable alphabets.

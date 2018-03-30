@@ -4,7 +4,7 @@
 #include <memory>
 #include <spdlogwrap.h>
 
-#include <ConsoleApp.h>
+#include <console/ConsoleApp.h>
 
 using namespace testing;
 using namespace std;
@@ -41,11 +41,6 @@ TEST_F(ConsoleAppTestFixture, LoggerAndConsoleCreated)
 {
     EXPECT_NE(Log(), nullptr);
     EXPECT_NE(Console(), nullptr);
-}
-
-TEST_F(ConsoleAppTestFixture, WindowCreate)
-{
-
 }
 
 }

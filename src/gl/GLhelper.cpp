@@ -1,4 +1,4 @@
-#include <GLhelper.h>
+#include <gl/GLhelper.h>
 
 using namespace glm;
 
