@@ -36,3 +36,9 @@ Testing the OpenGL initialization. Created a window. Wrapped it into a class.
 **Today's progress:** Introduced namespaces into the presentation model. Added basic unit tests. Started Window class.
 
 **Thoughts:** Creating the Window class implies some other classes as well (Point, Size, Rectangle, etc.) Those classes must be covered with unit tests as they will serve as a base for multiple functionalities. Is there a way to unit test the visible screen result (research)?
+
+## Day 7: March 12, 2018
+
+**Today's progress:** 
+
+**Thoughts:** 

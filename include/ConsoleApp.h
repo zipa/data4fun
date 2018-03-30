@@ -30,6 +30,8 @@ public:
 
     std::shared_ptr<Window> MakeWindow(int x, int y, int w, int h);
 
+    void Test();
+
 protected:
     std::shared_ptr<spdlog::logger> log_;
 
